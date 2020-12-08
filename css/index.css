@@ -1,0 +1,154 @@
+#point-box-bg {
+    overflow: hidden;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 200%;
+    height: 1080px;
+    background: url('./educateImgs/bg.png') -400px 0px;
+    background-size: cover;
+    z-index: 0;
+    transition: transform 2s ease-in-out;
+}
+
+/* button {
+    width: 30px;
+    position: absolute;
+    z-index: 9999;
+    left: 50px;
+}
+
+#button2 {
+    left: 100px;
+} */
+
+.my-point {
+    position: absolute;
+    left: 500px;
+    top: 300px;
+    width: 100px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.my-point img {
+    transition: top 1s ease;
+}
+
+/* .my-point:hover img {
+    position: absolute;
+    top: 15px;
+} */
+
+.my-point:hover {
+    filter: brightness(150%);
+}
+
+.my-point .point-name {
+    z-index: -1;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -40px;
+    height: 80px;
+    /* width: 300px; */
+    text-align: center;
+    font-size: 24px;
+    font-weight: bolder;
+
+    /* background-image: linear-gradient(180deg, #ffffff, #99bbff); */
+    /* -webkit-background-clip: text; */
+    color: #fff;
+}
+
+.my-point .point-name .point-center {
+    min-width: 162px;
+    height: 80px;
+    background: url('./educateImgs/tc.png') no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.my-point .point-name .point-left {
+    width: 21px;
+    height: 80px;
+    background: url('./educateImgs/tl.png') no-repeat;
+}
+
+.my-point .point-name .point-right {
+    width: 21px;
+    height: 80px;
+    background: url('./educateImgs/tr.png') no-repeat;
+}
+
+.my-point .point-name .point-center .point-text {
+    background-image: linear-gradient(180deg, #ffffff, #99bbff);
+    -webkit-background-clip: text;
+    color: transparent;
+    min-width: 162px;
+    margin-bottom: 15px;
+}
+
+.my-point .circle-1 {
+    position: absolute;
+    bottom: 0px;
+    width: 30px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    opacity: 0;
+    border-radius: 50%;
+    transform: rotate3d(1, 0, 0, 50deg);
+    animation: show1 2s 1s linear infinite;
+}
+
+.my-point .circle-2 {
+    position: absolute;
+    bottom: -3px;
+    width: 35px;
+    height: 35px;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 50%;
+    opacity: 0;
+    transform: rotate3d(1, 0, 0, 60deg);
+    animation: show1 2s 0.5s linear infinite;
+}
+
+.my-point .circle-3 {
+    position: absolute;
+    bottom: -6px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    opacity: 0;
+    transform: rotate3d(1, 0, 0, 60deg);
+    animation: show1 2s 2s linear infinite;
+}
+
+@keyframes show1 {
+    0% {
+        opacity: 0.5;
+        transform: scale(0) rotate3d(1, 0, 0, 50deg);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(0.5) rotate3d(1, 0, 0, 50deg);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1) rotate3d(1, 0, 0, 50deg);
+    }
+}
